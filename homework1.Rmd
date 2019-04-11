@@ -1,10 +1,10 @@
 ---
-title: "homework 1"
+title: "homework 1-410575010"
 date: "2019-04-01"
 output: html_document
 params:
-  studentID: "你的學號"
-  studentName: "你的名字"
+  studentID: "410575010"
+  studentName: "林書玉"
 ---
 
 # 注意事項
@@ -81,23 +81,35 @@ head(submitTime)
 ### 2.1
 請將submitTime轉成電腦看得懂的date time並存回相同答案物件submitTime。(原資料來自Google表單，所以是內定的UTC時區)
 ```{r ans21}
-
+library(lubridate)
+submitTime <- mdy_hms(submitTime)
+head(submitTime)
+submitTime
 ```
 
 ### 2.2
 請將submitTime轉成台灣時區，並存在答案物件twTime。
 ```{r ans22}
+twTime <- with_tz(submitTime , tzone = "Asia/Taipei")
+head(twTime)
+twTime
 ```
 
 ### 2.3
 使用`hour(twTime)`取出twTime的小時值。創造出一個logical class答案物件nightOwl，為TRUE若twTime中的投票時間在半夜1點到早上6點間（包含1與6。
 
 ```{r ans23}
+nightOwl <- hour(twTime) >= 1 & hour(twTime) <= 6
+class(nightOwl)
+head(nightOwl)
+nightOwl
 ```
 
 ### 2.4
 承上題，在上題半夜間投票的學生佔總投票人數的比何為多少？（存在答案物件nightOwlVoteShare）（hint: `length()`可以計算向量的元素個數）
 ```{r ans24}
+nightOwlVoteShare <- sum(nightOwl)/length(twTime)
+nightOwlVoteShare
 ```
 
 ## 3

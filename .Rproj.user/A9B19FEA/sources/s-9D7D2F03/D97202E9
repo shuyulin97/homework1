@@ -5,16 +5,16 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "501152436",
+    "hash" : "3003848122",
     "id" : "D97202E9",
-    "lastKnownWriteTime" : 1554953048,
-    "last_content_update" : 1554953048471,
+    "lastKnownWriteTime" : 1554954828,
+    "last_content_update" : 1554954864174,
     "path" : "C:/Users/user/Desktop/R/homework1/homework1.Rmd",
     "project_path" : "homework1.Rmd",
     "properties" : {
-        "cursorPosition" : "83,0",
+        "cursorPosition" : "110,48",
         "last_setup_crc32" : "9D7D2F032ea516c8",
-        "scrollLine" : "69"
+        "scrollLine" : "106"
     },
     "relative_order" : 1,
     "source_on_save" : false,
