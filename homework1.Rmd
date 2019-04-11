@@ -49,16 +49,23 @@ grade <- c(50,60,92,88)
 ### 1.1
 創造一個名為fromEcon的logical class物件，每個元素對應major物件中相同位置元素其值是否為"經濟系"的邏輯判斷——TRUE表示來自經濟系。（答案物件fromEcon）
 ```{r ans11}
+fromEcon <- major == "經濟系"
+class(fromEcon)
+fromEcon
 ```
 
 ### 1.2
 請由fromEcon計算出來自經濟學系的觀測值個數，存成答案物件sumEcon。
 ```{r ans12}
+sumEcon <- sum(fromEcon)
+sumEcon
 ```
 
 ### 1.3
 善用logical class遇到數學計算會形成1與0的數值之特質，計算經濟系學生在該科的平均成績（即經濟系學生在該科成績加總除以經濟系學生數），存成答案物件meanEcon。
 ```{r ans13}
+meanEcon <- sum(grade*fromEcon)/sum(fromEcon)
+meanEcon
 ```
  
 ## 2
@@ -74,6 +81,7 @@ head(submitTime)
 ### 2.1
 請將submitTime轉成電腦看得懂的date time並存回相同答案物件submitTime。(原資料來自Google表單，所以是內定的UTC時區)
 ```{r ans21}
+
 ```
 
 ### 2.2

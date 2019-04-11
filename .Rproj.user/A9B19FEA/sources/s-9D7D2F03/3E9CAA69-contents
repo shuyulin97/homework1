@@ -1,0 +1,30 @@
+---
+title: "Untitled"
+author: "ShuYu"
+date: "2019年4月11日"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r data1}
+major <- c("經濟系","法律系","社會系","經濟系")
+grade <- c(50,60,92,88)
+```
+
+### 1.1
+創造一個名為fromEcon的logical class物件，每個元素對應major物件中相同位置元素其值是否為"經濟系"的邏輯判斷——TRUE表示來自經濟系。（答案物件fromEcon）
+```{r ans11}
+
+```
+
+```{r}
+"經濟系" <- TRUE
+fromEcon <- c(TRUE,FALSE,FALSE,TRUE)
+fromEcon
+aLogical <- c(T,TRUE,F,FALSE,FALSE)
+class(aLogical)
+```
+
